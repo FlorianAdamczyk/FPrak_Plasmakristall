@@ -1,0 +1,32 @@
+\section{Plasma}
+Plasma wird oft als der vierte Aggregatzustand bezeichnet. Die Atome liegen hierbei als Ionen vor, die Elektronen und Ionen können sich frei bewegen. Je nach Eigenschaften der Plasmateilchen wird dieses in verschiedene Kategorien eingeteilt:
+\begin{itemize}
+    \item \textbf{relativistisches Plasma} liegt vor, wenn die kinetische Energie der Elektronen $\approx30\%$ der Lichtgeschwindigkeit beträgt.
+    \item Ein \textbf{quantenmechanisches Plasma} liegt vor, wenn die De-Broglie-Wellenlänge der Plasmateilchen größer als der Abstand zwischen den Teilchen ist.
+    \item Bei einem \textbf{idealen Plasma} ist die Coulomb-Wechselwirkungsenergie zwischen den Teilchen schwächer als die thermische Energie der Teilchen.
+    \item Ist der Ionisationsgrad $\frac{n_i}{n_i+n_g}<<1$, so spricht man von einem \textbf{Niedertemperaturplasma}. Hierbei sind $n_i$ die Dichte der ionisierten- und $n_g$ die Dichte der Neutralgasatome.
+\end{itemize}
+Für diesen Versuch wird ein nicht-relativistisches, klassisches, stark gekoppeltes 
+Niedertemperaturplasma benötigt.
+
+\section{Plasmakristall}
+Die Plasmateilchen sind frei beweglich, sie können daher keine Kristallstrutktur bilden. Um diese zu erzeugen wird ein sogennantes \textbf{komplexes Plasma} benötigt: Zum Plasma werden kleine, feste Kügelchen (Radius $\approx1\mu m$) zugesetzt. Die Partikel laden sich daraufhin durch Stöße mit den freien Elektronen des Plasmas auf. Durch die Coulomb\,-\,Wechselwirkung zwischen diesen stark geladenen Kügelchen können diese unter richtigen Randbedingungen in einen geordneten Zustand gebracht werden und der Plasmakristall ensteht. Durch ein elektrisches Feld kann der Kristall in Schwebe gehalten, und mit einem Laser beobachtet werden,
+\\
+Zusätzlich wirken aufgrund des Neutralgases Reibungskräfte auf den Kristall. Zudem kann Thermospherese auftreten: Dabei werden die Teilchen entlang des Temperaturgradieten im Plasma bewegt.
+
+\section{Struktur des Kristalls}
+Ein Kristall zeichnet sich durch Fernordnung aus, d.h. die Abstände der Atome (in unserem Fall der Plastikkügelchen) sind periodisch. Die Paarkorrelationsfunktion $g(\textbf{r})$ ist ein Maß für die Wahrscheinlichkeit einer Fernordnung: 
+$$
+    g(\textbf{r})=\Big\langle\frac{1}{N}\sum_{i\neq j}^{N}\delta(\textbf{r}-(\textbf{r}_i-\textbf{r}_j)\Big\rangle
+$$
+Die Funktion gibt also den Erwartungswert an, dass sich im Abstand r von einem Teilchen i ein anderes Teilchen j befindet. Liegt Fernordnung vor und zeichnet man die Funktion g gegen r auf, so sind daher periodische Peaks zu finden. Die Struktur muss nicht im gesamten Kristall dieselbe sein: Es können sich auch Domänen bilden, d.h. das verschiedene \glqq Abschnitte\grqq{} des Kristalls unterschiedliche Strukturen besitzen können.
+\\
+Im Verlauf der Auswertung wird die Struktur mithilfe der Local-Order-Analyse durchgeführt. Hierfür werden Bond-Order-Parameter (numerisch) berechnet:
+$$
+    q_l(\textbf{r}_i)=\sqrt{\frac{4\pi}{2l+1}\sum_{m=-l}^{l}|q_{lm}(\textbf{r}_i)|^2}
+$$
+Mit
+$$
+    q_{lm}(\textbf{r}_i)=\frac{1}{N}\sum_{j=1}^{N}Y_{lm}(\Theta(\textbf{r}_i-\textbf{r}_j),\Phi(\textbf{r}_i-\textbf{r}_j))
+$$
+Mithilfe dieser Funktionen könnnen verschiedene Domänenstrukturen bestimmt werden.

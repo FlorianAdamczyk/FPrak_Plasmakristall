@@ -1,0 +1,16 @@
+>> mean(BondOrderParameterFast(pos3dHCP,12,4,1))
+ans =  0.097222
+>> mean(BondOrderParameterFast(pos3dHCP,12,6,1))
+ans =  0.48476
+
+
+>> mean(BondOrderParameterFast(pos3dFCC,12,4,1))
+ans =  0.19094
+>> mean(BondOrderParameterFast(pos3dFCC,12,6,1))
+ans =  0.57452
+
+
+>> mean(BondOrderParameterFast(pos3dBCC,8,4,1))
+ans =  0.50918
+>> mean(BondOrderParameterFast(pos3dBCC,8,6,1))
+ans =  0.62854

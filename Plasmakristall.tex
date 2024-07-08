@@ -36,6 +36,7 @@
 \usepackage{enumitem}
 \usepackage{multirow}
 \usepackage{blindtext}
+\usepackage{lipsum}
 \usepackage[version=4]{mhchem} % um Chemische Elementsymbole zu benutzen: \ce{H20}
 
 \usepackage{pdfpages} % um PDFs einzufügen
@@ -46,8 +47,6 @@
 
 \providecommand{\e}[1]{\ensuremath{\cdot 10^{#1}}}
 \providecommand{\fehlt}{\textcolor{red}{{ ¡Fehlt! }}}
-
-\providecommand{\versuchstitel}{Plasmakristall} % Hier den Versuchstitel eintragen!
 
 \usepackage{siunitx}
 \sisetup{
@@ -61,7 +60,7 @@
 
 
 \setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
-\title{\versuchstitel}
+\title{Plasmakristall} % Title
 
 
 \author{Frederik Uhlemann, Florian Adamczyk}
@@ -78,7 +77,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\theauthor}
-\lhead{\versuchstitel}
+\lhead{\thetitle}
 \cfoot{\thepage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -95,7 +94,7 @@
 		Versuch 7 des\\
 		\textsc{\Large Fortgeschrittenen-Praktikums}\\ [0.3 cm]				% Course Code
 		\rule{\linewidth}{0.2 mm} \\[0.4 cm]
-		{ \huge \bfseries \thetitle}\\%%% TITEL HERE
+		{ \huge \bfseries \thetitle}\\
 		\rule{\linewidth}{0.2 mm}\\
 		Versuchstermin 22.07.2024 \\
 		~ \\
@@ -142,6 +141,7 @@
 %\setcounter{chapter}{-1}
 \chapter*{Einleitung}\addcontentsline{toc}{chapter}{Einleitung}
 	\fehlt
+	\lipsum
 
 	% notiz an mich: mit "~ bewirke ich einen geschützten bindestrich an dem nicht getrennt werden darf.
 	% nur eine ~ macht ein geschütztes (normales) Leerzeichen. \, macht ein halbes geschütztes Leerzeichen.
