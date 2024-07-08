@@ -10,8 +10,16 @@
 *.toc
 *.synctex.gz
 *.syntex*
+*.blg
+*.lof
+*.bbl
+*.bcf
+*.run.xml
+
+# pdf Dateien
 
 Plasmakristall.pdf
+main.pdf
 
 # R zeug
 .Rhistory
