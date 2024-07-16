@@ -141,27 +141,107 @@
 %\pagebreak
 	
 %\setcounter{chapter}{-1}
-\chapter*{Einleitung}\addcontentsline{toc}{chapter}{Einleitung}
+\chapter*{Zielsetzung}\addcontentsline{toc}{chapter}{Einleitung}
 Im Rahmen des Versuchs \glqq{}Plasmakristall\grqq{} wird die Erzeugung und Untersuchung eines Plasmakristalls in einer Niederdruckkammer angestrebt. Hierbei wird ein Plasma aus Argon-Gas erzeugt, in das Mikropartikel aus Plastik eingebracht werden. Diese Partikel laden sich negativ auf und ordnen sich unter geeigneten Bedingungen zu einem Kristall. Ziel des Experiments ist es, die Kristallstruktur, die Abstände zwischen den Partikeln sowie den Übergang zur flüssigen Phase zu analysieren. Die Beobachtung und Analyse der Kristallbildung erfolgt mithilfe eines Lasers und einer Digitalkamera, die es ermöglichen, die Strukturen ebenenweise zu erfassen und zu dokumentieren. Die gewonnenen Daten werden anschließend mit theoretischen Modellen und den Eigenschaften idealer Kristalle verglichen, um ein tieferes Verständnis der physikalischen Prozesse zu erlangen.
 
 	% notiz an mich: mit "~ bewirke ich einen geschützten bindestrich an dem nicht getrennt werden darf.
 	% nur eine ~ macht ein geschütztes (normales) Leerzeichen. \, macht ein halbes geschütztes Leerzeichen.
 
 \chapter{Theorie}
-\paragraph{Der Begriff} \glqq{}Plasmakristall\grqq{} mag auf den ersten Blick widersprüchlich erscheinen, da man in der Plasmaphase keine geordneten Strukturen erwartet. Normalerweise ist es erforderlich, dass ein System von der gasförmigen über die flüssige in die feste Phase übergeht, um kristalline Strukturen zu bilden. In einem herkömmlichen Plasma ist dies nicht möglich. Allerdings können in komplexen, mehrkomponentigen Plasmen unter bestimmten Bedingungen geordnete Strukturen auftreten. Ein Beispiel hierfür sind Mikropartikel aus Plastik, die sich in einem Niedertemperaturplasma zu einer kristallartigen Anordnung formieren können, was als Plasmakristall bezeichnet wird.
+\section{Einleitung} Der Begriff \glqq{}Plasmakristall\grqq{} mag auf den ersten Blick widersprüchlich erscheinen, da man in der Plasmaphase keine geordneten Strukturen erwartet. Normalerweise ist es erforderlich, dass ein System von der gasförmigen über die flüssige in die feste Phase übergeht, um kristalline Strukturen zu bilden. In einem herkömmlichen Plasma ist dies nicht möglich. Allerdings können in komplexen, mehrkomponentigen Plasmen unter bestimmten Bedingungen geordnete Strukturen auftreten. Ein Beispiel hierfür sind Mikropartikel aus Plastik, die sich in einem Niedertemperaturplasma zu einer kristallartigen Anordnung formieren können, was als Plasmakristall bezeichnet wird.
 
-Diese Mikropartikel werden durch die Interaktion mit den Elektronen und Ionen im Plasma negativ aufgeladen. Partikel von wenigen Mikrometern Durchmesser können dabei bis zu \(10^5\) Elektronen aufnehmen. Diese geladenen Mikropartikel interagieren über Coulomb-Kräfte, wobei diese durch die positiven Ionen im Plasma abgeschirmt werden. Für die Kristallbildung ist das Verhältnis \( \Gamma \) der (abgeschirmten) Coulomb-Energie zur mittleren thermischen Energie der Mikropartikel (\(E_{\text{th}} \approx kT_d\)) entscheidend:
+\paragraph{Die theoretische Vorhersage} des Plasmakristalls erfolgte 1986, und der experimentelle Nachweis gelang 1994 am Deutschen Zentrum für Luft- und Raumfahrt (DLR) in Köln in Zusammenarbeit mit dem Max-Planck-Institut für extraterrestrische Physik (MPE) in Garching. Die Untersuchung von Plasmakristallen ist ein aktuelles Forschungsgebiet, das sowohl für die Grundlagenforschung als auch für Anwendungen in der Materialwissenschaft und der Astrophysik von Interesse ist.
+
+\section{Plasma als vierter Aggregatzustand}
+Plasma wird oft als der vierte Aggregatzustand bezeichnet, bei dem die Atome ionisiert vorliegen. Dies bedeutet, dass die Elektronen von den Atomkernen getrennt und somit frei beweglich sind. Plasmen werden je nach den Eigenschaften ihrer Teilchen in verschiedene Kategorien eingeteilt:
+
+\begin{itemize}
+    \item \textbf{Relativistisches Plasma:} Liegt vor, wenn die kinetische Energie der Elektronen etwa 30 \% der Lichtgeschwindigkeit beträgt.
+    \item \textbf{Quantenmechanisches Plasma:} Hierbei ist die de-Broglie-Wellenlänge der Plasmateilchen größer als der Abstand zwischen den Teilchen.
+    \item \textbf{Ideales Plasma:} Die Coulomb-Wechselwirkungsenergie zwischen den Teilchen ist schwächer als die thermische Energie der Teilchen.
+    \item \textbf{Niedertemperaturplasma:} Der Ionisationsgrad \( \frac{n_i}{n_i + n_g} \ll 1 \), wobei \( n_i \) die Dichte der ionisierten und \( n_g \) die Dichte der neutralen Gasatome ist.
+\end{itemize}
+
+In diesem Experiment wird ein nicht-relativistisches, klassisches, stark gekoppeltes Niedertemperaturplasma verwendet.
+
+\section{Plasmakristall}
+In einem normalen Plasma sind die Teilchen frei beweglich, was eine Kristallstruktur verhindert. Ein sogenanntes komplexes Plasma, dem kleine, feste Kügelchen (Durchmesser etwa 1 µm) hinzugefügt werden, ermöglicht jedoch die Bildung eines Plasmakristalls. Diese Partikel laden sich durch Stöße mit den freien Elektronen auf und interagieren über Coulomb-Wechselwirkungen. Unter geeigneten Bedingungen entsteht eine geordnete Struktur, die als Plasmakristall bezeichnet wird. Ein elektrisches Feld hält den Kristall in Schwebe, und er kann mithilfe eines Lasers beobachtet werden. Reibungskräfte und Thermophorese, die Bewegung der Teilchen entlang eines Temperaturgradienten, beeinflussen zusätzlich die Kristallstruktur.
+
+\section{Struktur des Kristalls}
+Ein Kristall zeichnet sich durch Fernordnung aus, was bedeutet, dass die Abstände der Atome oder Partikel periodisch sind. Die Paarkorrelationsfunktion \( g(r) \) ist ein Maß für die Wahrscheinlichkeit der Fernordnung. Sie gibt den Erwartungswert an, dass sich im Abstand \( r \) von einem Teilchen \( i \) ein anderes Teilchen \( j \) befindet. Bei Vorliegen von Fernordnung zeigt die Funktion \( g \) gegen \( r \) periodische Peaks. Die Struktur muss jedoch nicht im gesamten Kristall homogen sein; es können sich Domänen mit unterschiedlichen Strukturen bilden.
+
+\section{Coulomb-Kopplungsparameter}
+Die Mikropartikel werden durch die Interaktion mit den Elektronen und Ionen im Plasma negativ aufgeladen. Partikel von wenigen Mikrometern Durchmesser können dabei bis zu \(10^5\) Elektronen aufnehmen. Diese geladenen Mikropartikel interagieren über Coulomb-Kräfte, wobei diese durch die positiven Ionen im Plasma abgeschirmt werden. Für die Kristallbildung ist das Verhältnis \( \Gamma \) der (abgeschirmten) Coulomb-Energie zur mittleren thermischen Energie der Mikropartikel (\(E_{\text{th}} \approx kT_d\)) entscheidend:
 
 \[ \Gamma_{\text{eff}} = \frac{Z^2 e^2 \exp(-\Delta/\lambda_D)}{4 \pi \epsilon_0 \Delta kT_d} \]
 
 Hierbei repräsentiert \(Ze\) die mittlere Ladung pro Partikel, \( \Delta \) den mittleren Abstand zwischen den Partikeln, \( \lambda_D \) die Debye-Abschirmlänge und \( T_d \) die kinetische Temperatur der Partikel. Plasmen, bei denen \( \Gamma_{\text{eff}} > 1 \) ist, werden als stark gekoppelt bezeichnet. Um eine Kristallstruktur zu bilden, muss ein kritischer Wert \( \Gamma_{\text{eff}}^c \approx 100 - 1000 \) überschritten werden. Liegt der Wert darunter, befindet sich das System in der flüssigen oder gasförmigen Phase. Außerdem sollte der Abstand zwischen den Mikropartikeln nicht wesentlich größer als die Abschirmlänge sein, was durch \( \kappa = \Delta/\lambda_D \lesssim 1 \) ausgedrückt wird.
 
-\samepage{Die theoretische Vorhersage des Plasmakristalls erfolgte 1986, und der experimentelle Nachweis gelang 1994 am Deutschen Zentrum für Luft- und Raumfahrt (DLR) in Köln in Zusammenarbeit mit dem Max-Planck-Institut für extraterrestrische Physik (MPE) in Garching.}
+% Der Coulomb-Kopplungsparameter \( \Gamma \) quantifiziert das Verhältnis zwischen der Coulomb-Wechselwirkungsenergie der geladenen Mikropartikel und ihrer thermischen Energie:
+
+% \[ \Gamma_{\text{eff}} = \frac{Z^2 e^2 \exp(-\Delta/\lambda_D)}{4 \pi \epsilon_0 \Delta kT_d} \]
+
+% Hierbei ist \( Z e \) die mittlere Ladung pro Partikel, \( \Delta \) der mittlere Abstand zwischen den Partikeln, \( \lambda_D \) die Debye-Abschirmlänge und \( T_d \) die kinetische Temperatur der Partikel. Plasmen mit \( \Gamma_{\text{eff}} > 1 \) nennt man stark gekoppelt. Um einen Plasmakristall zu bilden, muss \( \Gamma_{\text{eff}} \) einen kritischen Wert von etwa 100 bis 1000 überschreiten. 
+
+\section{Entstehung des Plasmakristalls}
+Die Bildung eines Plasmakristalls erfolgt durch die Wechselwirkungen zwischen den Mikropartikeln, die durch die Elektronenstöße stark geladen sind. Diese interagieren hauptsächlich über eine abgeschirmte Coulomb-Wechselwirkung (Yukawa-Kraft). Trotz der dominierenden repulsiven Kräfte kann eine regelmäßige Struktur entstehen, indem die Partikel durch äußere Kräfte, wie Gravitation, elektrische Felder und Thermophorese, in einem kleinen Volumen gehalten werden. Wenn zwischen diesen Kräften ein Gleichgewicht herrscht, bildet sich der Plasmakristall.
+
+Durch die detaillierte Analyse der Kristallstruktur mithilfe der Paarkorrelationsfunktion und Bond-Order-Parameter lassen sich verschiedene Domänenstrukturen und ihre Eigenschaften bestimmen. Diese theoretischen Konzepte und die daraus resultierenden experimentellen Beobachtungen liefern wertvolle Einblicke in das Verhalten und die Eigenschaften komplexer Plasmen.
+
 
 \chapter{Aufbau und Durchführung}
-	\fehlt
-	
-	
+	\section{Material}
+	Das Experiment zur Untersuchung eines Plasmakristalls verwendet verschiedene spezialisierte Komponenten. Die wesentlichen Materialien umfassen:
+
+\begin{itemize}
+    \item \textbf{Mikropartikel:} Melamin-Formaldehyd-Kügelchen mit einem Durchmesser von 3,4 µm.
+    \item \textbf{Plasmakammer:} Eine Kammer mit runden Elektroden oben und unten, die kapazitiv an einen HF-Generator (13,56 MHz) gekoppelt sind. Beobachtungsfenster aus Glas ermöglichen die visuelle Inspektion.
+    \item \textbf{Dispensor:} Ein in die obere Elektrode integrierter Shaker zur Injektion der Mikropartikel.
+    \item \textbf{Gas:} Argon (Ionisierungsenergie: 15,7 eV, Ionisationsgrad: \(10^{-7} - 10^{-6}\)).
+\end{itemize}
+
+\section{Aufbau}
+Der gesamte Aufbau ist in einem transportablen Gestell untergebracht und umfasst folgende Hauptkomponenten:
+\begin{itemize}
+    \item \textbf{Plasmakammer und Dispensor:} Die Elektroden in der Plasmakammer sind rund und befinden sich oben und unten. Die kapazitive Ankopplung erfolgt über einen HF-Generator. Ein integrierter Shaker in der oberen Elektrode dient zur Injektion der Teilchen.
+    \item \textbf{Vakuum- und Gasfüllsystem:} Bestehend aus einer Membran-Vorpumpe, einem Handventil, einer Turbomolekularpumpe und einem Druckbehälter mit Argon. Die Druckregelung erfolgt über ein motorisiertes Ventilsystem.
+    \item \textbf{Laser:} Ein Dioden-Laser (652 nm Wellenlänge, 35 mW Ausgangsleistung) mit integrierter Zylinderoptik zur Auffächerung des Strahls.
+    \item \textbf{Videokamera:} Eine HD-Kamera zur Aufzeichnung des gestreuten Laserlichts. Sie verfügt über ein Objektiv mit Interferenzfilter und eine motorisierte Linearverschiebung zur Kristall-Scan.
+    \item \textbf{Steuerelektronik (E-Box):} Zum Betrieb und zur Steuerung aller Experimentkomponenten, gesteuert durch ein Programm namens \glqq{}LabView\grqq{}.
+    \item \textbf{Rechner:} Ein Kompakt-PC zur Steuerung des Experimentaufbaus, Anzeige, Aufzeichnung und Auswertung der Kamerabilder sowie Ansteuerung des Scannermotors.
+\end{itemize}
+
+\newpage
+\section{Durchführung}
+Die Durchführung des Experiments gliedert sich in mehrere Schritte:
+
+\begin{enumerate}
+    \item \textbf{Inbetriebnahme des Systems:}
+    \begin{itemize}
+        \item Einschalten der 24V-Spannungsversorgung und der E-Box am Vortag.
+        \item Aktivierung der Pumpen und Öffnen des Handventils.
+        \item Einschalten der Turbomolekularpumpe bei einem Druck unter 8 mbar.
+    \end{itemize}
+    \item \textbf{Starten des Experiments:}
+    \begin{itemize}
+        \item Starten des PCs und des Programms "PK-Prakt.vi" zur Steuerung des Experiments.
+        \item Aktivierung der Motor-Stromversorgung und Druckregelung.
+        \item Einrichten der Kamera und Einstellen der Kameraparameter.
+    \end{itemize}
+    \item \textbf{Aktivierung des Lasers und Erzeugung des Plasmas:}
+    \begin{itemize}
+        \item Einschalten des Lasers über das "RF \& Laser Control"-Feld im Programm.
+        \item Erhöhen der Hochfrequenzspannung zur Zündung des Plasmas und anschließendes Reduzieren der Spannung.
+        \item Injektion der Mikropartikel mittels Dispensor.
+    \end{itemize}
+    \item \textbf{Druckregelung und Anpassung:}
+    \begin{itemize}
+        \item Feineinstellung des Drucks durch Gaszufuhr und Anpassung über das "Pressure Control"-Feld.
+        \item Sicherstellung, dass der Dispensor nach der Partikeleinschüttung vollständig zurückgezogen ist.
+    \end{itemize}
+\end{enumerate}
+
+Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend untersucht werden kann.	
 
 
 \chapter{Auswertung}
@@ -175,8 +255,8 @@ Hierbei repräsentiert \(Ze\) die mittlere Ladung pro Partikel, \( \Delta \) den
 	\bibitem{Anleitung}
 	Prof. Dr. Markus Thoma, Dr. Michael Kretschmer. Anleitung zum Fortgeschrittenen"~Praktikum.\\ \glqq Versuch: Plasmakristall\grqq.\\ Justus-Liebig-Universität Gießen. 11/2022 MK.
 	
-	\bibitem{Plasmakristall}
-		\fehlt
+	\bibitem{Testat}
+		Das am 22.07.2024 angefertigte Testat zum Versuch \glqq Plasmakristall\grqq.
 	\end{thebibliography}
 
 
