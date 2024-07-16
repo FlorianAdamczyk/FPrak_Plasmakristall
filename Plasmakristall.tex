@@ -19,6 +19,7 @@
 	
 \usepackage{csquotes} % mit \enquote{blabla} tolle anfürungsstriche erstellen
 %\usepackage{physics} %lässt mich \bra und \ket benuzen %im konflict mit siunitx
+\usepackage{amssymb} % für \gtrsim und \lesssim
 
 \usepackage{pgfplots} %für plots
 \pgfplotsset{compat=newest}
@@ -47,6 +48,7 @@
 
 \providecommand{\e}[1]{\ensuremath{\cdot 10^{#1}}}
 \providecommand{\fehlt}{\textcolor{red}{{ ¡Fehlt! }}}
+\providecommand{\mytitle}{Plasmakristall}
 
 \usepackage{siunitx}
 \sisetup{
@@ -60,7 +62,7 @@
 
 
 \setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
-\title{Plasmakristall} % Title
+\title{\mytitle} % Title
 
 
 \author{Frederik Uhlemann, Florian Adamczyk}
@@ -77,7 +79,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\theauthor}
-\lhead{\thetitle}
+\lhead{\mytitle}
 \cfoot{\thepage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -129,7 +131,7 @@
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{4}
+\setcounter{tocdepth}{3}
 \tableofcontents
 %\newpage
 
@@ -140,14 +142,21 @@
 	
 %\setcounter{chapter}{-1}
 \chapter*{Einleitung}\addcontentsline{toc}{chapter}{Einleitung}
-	\fehlt
-	\lipsum
+Im Rahmen des Versuchs \glqq{}Plasmakristall\grqq{} wird die Erzeugung und Untersuchung eines Plasmakristalls in einer Niederdruckkammer angestrebt. Hierbei wird ein Plasma aus Argon-Gas erzeugt, in das Mikropartikel aus Plastik eingebracht werden. Diese Partikel laden sich negativ auf und ordnen sich unter geeigneten Bedingungen zu einem Kristall. Ziel des Experiments ist es, die Kristallstruktur, die Abstände zwischen den Partikeln sowie den Übergang zur flüssigen Phase zu analysieren. Die Beobachtung und Analyse der Kristallbildung erfolgt mithilfe eines Lasers und einer Digitalkamera, die es ermöglichen, die Strukturen ebenenweise zu erfassen und zu dokumentieren. Die gewonnenen Daten werden anschließend mit theoretischen Modellen und den Eigenschaften idealer Kristalle verglichen, um ein tieferes Verständnis der physikalischen Prozesse zu erlangen.
 
 	% notiz an mich: mit "~ bewirke ich einen geschützten bindestrich an dem nicht getrennt werden darf.
 	% nur eine ~ macht ein geschütztes (normales) Leerzeichen. \, macht ein halbes geschütztes Leerzeichen.
 
 \chapter{Theorie}
-	\fehlt
+\paragraph{Der Begriff} \glqq{}Plasmakristall\grqq{} mag auf den ersten Blick widersprüchlich erscheinen, da man in der Plasmaphase keine geordneten Strukturen erwartet. Normalerweise ist es erforderlich, dass ein System von der gasförmigen über die flüssige in die feste Phase übergeht, um kristalline Strukturen zu bilden. In einem herkömmlichen Plasma ist dies nicht möglich. Allerdings können in komplexen, mehrkomponentigen Plasmen unter bestimmten Bedingungen geordnete Strukturen auftreten. Ein Beispiel hierfür sind Mikropartikel aus Plastik, die sich in einem Niedertemperaturplasma zu einer kristallartigen Anordnung formieren können, was als Plasmakristall bezeichnet wird.
+
+Diese Mikropartikel werden durch die Interaktion mit den Elektronen und Ionen im Plasma negativ aufgeladen. Partikel von wenigen Mikrometern Durchmesser können dabei bis zu \(10^5\) Elektronen aufnehmen. Diese geladenen Mikropartikel interagieren über Coulomb-Kräfte, wobei diese durch die positiven Ionen im Plasma abgeschirmt werden. Für die Kristallbildung ist das Verhältnis \( \Gamma \) der (abgeschirmten) Coulomb-Energie zur mittleren thermischen Energie der Mikropartikel (\(E_{\text{th}} \approx kT_d\)) entscheidend:
+
+\[ \Gamma_{\text{eff}} = \frac{Z^2 e^2 \exp(-\Delta/\lambda_D)}{4 \pi \epsilon_0 \Delta kT_d} \]
+
+Hierbei repräsentiert \(Ze\) die mittlere Ladung pro Partikel, \( \Delta \) den mittleren Abstand zwischen den Partikeln, \( \lambda_D \) die Debye-Abschirmlänge und \( T_d \) die kinetische Temperatur der Partikel. Plasmen, bei denen \( \Gamma_{\text{eff}} > 1 \) ist, werden als stark gekoppelt bezeichnet. Um eine Kristallstruktur zu bilden, muss ein kritischer Wert \( \Gamma_{\text{eff}}^c \approx 100 - 1000 \) überschritten werden. Liegt der Wert darunter, befindet sich das System in der flüssigen oder gasförmigen Phase. Außerdem sollte der Abstand zwischen den Mikropartikeln nicht wesentlich größer als die Abschirmlänge sein, was durch \( \kappa = \Delta/\lambda_D \lesssim 1 \) ausgedrückt wird.
+
+\samepage{Die theoretische Vorhersage des Plasmakristalls erfolgte 1986, und der experimentelle Nachweis gelang 1994 am Deutschen Zentrum für Luft- und Raumfahrt (DLR) in Köln in Zusammenarbeit mit dem Max-Planck-Institut für extraterrestrische Physik (MPE) in Garching.}
 
 \chapter{Aufbau und Durchführung}
 	\fehlt
