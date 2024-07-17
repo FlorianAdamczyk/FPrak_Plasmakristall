@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,ngerman]{report}
+\documentclass[12pt,a4paper,ngerman]{article}
 \usepackage{babel}
 %\usepackage{natbib}
 \usepackage{url}
@@ -132,7 +132,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-\tableofcontents
+% \tableofcontents
 %\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -141,14 +141,14 @@
 %\pagebreak
 	
 %\setcounter{chapter}{-1}
-\chapter*{Zielsetzung}\addcontentsline{toc}{chapter}{Einleitung}
+\section*{Zielsetzung}\addcontentsline{toc}{chapter}{Einleitung}
 Im Rahmen des Versuchs \glqq{}Plasmakristall\grqq{} wird die Erzeugung und Untersuchung eines Plasmakristalls in einer Niederdruckkammer angestrebt. Hierbei wird ein Plasma aus Argon-Gas erzeugt, in das Mikropartikel aus Plastik eingebracht werden. Diese Partikel laden sich negativ auf und ordnen sich unter geeigneten Bedingungen zu einem Kristall. Ziel des Experiments ist es, die Kristallstruktur, die Abstände zwischen den Partikeln sowie den Übergang zur flüssigen Phase zu analysieren. Die Beobachtung und Analyse der Kristallbildung erfolgt mithilfe eines Lasers und einer Digitalkamera, die es ermöglichen, die Strukturen ebenenweise zu erfassen und zu dokumentieren. Die gewonnenen Daten werden anschließend mit theoretischen Modellen und den Eigenschaften idealer Kristalle verglichen, um ein tieferes Verständnis der physikalischen Prozesse zu erlangen.
 
 	% notiz an mich: mit "~ bewirke ich einen geschützten bindestrich an dem nicht getrennt werden darf.
 	% nur eine ~ macht ein geschütztes (normales) Leerzeichen. \, macht ein halbes geschütztes Leerzeichen.
 
-\chapter{Theorie}
-\section{Einleitung} Der Begriff \glqq{}Plasmakristall\grqq{} mag auf den ersten Blick widersprüchlich erscheinen, da man in der Plasmaphase keine geordneten Strukturen erwartet. Normalerweise ist es erforderlich, dass ein System von der gasförmigen über die flüssige in die feste Phase übergeht, um kristalline Strukturen zu bilden. In einem herkömmlichen Plasma ist dies nicht möglich. Allerdings können in komplexen, mehrkomponentigen Plasmen unter bestimmten Bedingungen geordnete Strukturen auftreten. Ein Beispiel hierfür sind Mikropartikel aus Plastik, die sich in einem Niedertemperaturplasma zu einer kristallartigen Anordnung formieren können, was als Plasmakristall bezeichnet wird.
+\section{Theorie}
+\subsection{Einleitung} Der Begriff \glqq{}Plasmakristall\grqq{} mag auf den ersten Blick widersprüchlich erscheinen, da man in der Plasmaphase keine geordneten Strukturen erwartet. Normalerweise ist es erforderlich, dass ein System von der gasförmigen über die flüssige in die feste Phase übergeht, um kristalline Strukturen zu bilden. In einem herkömmlichen Plasma ist dies nicht möglich. Allerdings können in komplexen, mehrkomponentigen Plasmen unter bestimmten Bedingungen geordnete Strukturen auftreten. Ein Beispiel hierfür sind Mikropartikel aus Plastik, die sich in einem Niedertemperaturplasma zu einer kristallartigen Anordnung formieren können, was als Plasmakristall bezeichnet wird.
 
 \paragraph{Die theoretische Vorhersage} des Plasmakristalls erfolgte 1986, und der experimentelle Nachweis gelang 1994 am Deutschen Zentrum für Luft- und Raumfahrt (DLR) in Köln in Zusammenarbeit mit dem Max-Planck-Institut für extraterrestrische Physik (MPE) in Garching. Die Untersuchung von Plasmakristallen ist ein aktuelles Forschungsgebiet, das sowohl für die Grundlagenforschung als auch für Anwendungen in der Materialwissenschaft und der Astrophysik von Interesse ist.
 
@@ -164,13 +164,13 @@ Plasma wird oft als der vierte Aggregatzustand bezeichnet, bei dem die Atome ion
 
 In diesem Experiment wird ein nicht-relativistisches, klassisches, stark gekoppeltes Niedertemperaturplasma verwendet.
 
-\section{Plasmakristall}
+\subsection{Plasmakristall}
 In einem normalen Plasma sind die Teilchen frei beweglich, was eine Kristallstruktur verhindert. Ein sogenanntes komplexes Plasma, dem kleine, feste Kügelchen (Durchmesser etwa 1 µm) hinzugefügt werden, ermöglicht jedoch die Bildung eines Plasmakristalls. Diese Partikel laden sich durch Stöße mit den freien Elektronen auf und interagieren über Coulomb-Wechselwirkungen. Unter geeigneten Bedingungen entsteht eine geordnete Struktur, die als Plasmakristall bezeichnet wird. Ein elektrisches Feld hält den Kristall in Schwebe, und er kann mithilfe eines Lasers beobachtet werden. Reibungskräfte und Thermophorese, die Bewegung der Teilchen entlang eines Temperaturgradienten, beeinflussen zusätzlich die Kristallstruktur.
 
-\section{Struktur des Kristalls}
+\subsection{Struktur des Kristalls}
 Ein Kristall zeichnet sich durch Fernordnung aus, was bedeutet, dass die Abstände der Atome oder Partikel periodisch sind. Die Paarkorrelationsfunktion \( g(r) \) ist ein Maß für die Wahrscheinlichkeit der Fernordnung. Sie gibt den Erwartungswert an, dass sich im Abstand \( r \) von einem Teilchen \( i \) ein anderes Teilchen \( j \) befindet. Bei Vorliegen von Fernordnung zeigt die Funktion \( g \) gegen \( r \) periodische Peaks. Die Struktur muss jedoch nicht im gesamten Kristall homogen sein; es können sich Domänen mit unterschiedlichen Strukturen bilden.
 
-\section{Coulomb-Kopplungsparameter}
+\subsection{Coulomb-Kopplungsparameter}
 Die Mikropartikel werden durch die Interaktion mit den Elektronen und Ionen im Plasma negativ aufgeladen. Partikel von wenigen Mikrometern Durchmesser können dabei bis zu \(10^5\) Elektronen aufnehmen. Diese geladenen Mikropartikel interagieren über Coulomb-Kräfte, wobei diese durch die positiven Ionen im Plasma abgeschirmt werden. Für die Kristallbildung ist das Verhältnis \( \Gamma \) der (abgeschirmten) Coulomb-Energie zur mittleren thermischen Energie der Mikropartikel (\(E_{\text{th}} \approx kT_d\)) entscheidend:
 
 \[ \Gamma_{\text{eff}} = \frac{Z^2 e^2 \exp(-\Delta/\lambda_D)}{4 \pi \epsilon_0 \Delta kT_d} \]
@@ -183,14 +183,14 @@ Hierbei repräsentiert \(Ze\) die mittlere Ladung pro Partikel, \( \Delta \) den
 
 % Hierbei ist \( Z e \) die mittlere Ladung pro Partikel, \( \Delta \) der mittlere Abstand zwischen den Partikeln, \( \lambda_D \) die Debye-Abschirmlänge und \( T_d \) die kinetische Temperatur der Partikel. Plasmen mit \( \Gamma_{\text{eff}} > 1 \) nennt man stark gekoppelt. Um einen Plasmakristall zu bilden, muss \( \Gamma_{\text{eff}} \) einen kritischen Wert von etwa 100 bis 1000 überschreiten. 
 
-\section{Entstehung des Plasmakristalls}
+\subsection{Entstehung des Plasmakristalls}
 Die Bildung eines Plasmakristalls erfolgt durch die Wechselwirkungen zwischen den Mikropartikeln, die durch die Elektronenstöße stark geladen sind. Diese interagieren hauptsächlich über eine abgeschirmte Coulomb-Wechselwirkung (Yukawa-Kraft). Trotz der dominierenden repulsiven Kräfte kann eine regelmäßige Struktur entstehen, indem die Partikel durch äußere Kräfte, wie Gravitation, elektrische Felder und Thermophorese, in einem kleinen Volumen gehalten werden. Wenn zwischen diesen Kräften ein Gleichgewicht herrscht, bildet sich der Plasmakristall.
 
 Durch die detaillierte Analyse der Kristallstruktur mithilfe der Paarkorrelationsfunktion und Bond-Order-Parameter lassen sich verschiedene Domänenstrukturen und ihre Eigenschaften bestimmen. Diese theoretischen Konzepte und die daraus resultierenden experimentellen Beobachtungen liefern wertvolle Einblicke in das Verhalten und die Eigenschaften komplexer Plasmen.
 
 
-\chapter{Aufbau und Durchführung}
-	\section{Material}
+\section{Aufbau und Durchführung}
+	\subsection{Material}
 	Das Experiment zur Untersuchung eines Plasmakristalls verwendet verschiedene spezialisierte Komponenten. Die wesentlichen Materialien umfassen:
 
 \begin{itemize}
@@ -200,7 +200,7 @@ Durch die detaillierte Analyse der Kristallstruktur mithilfe der Paarkorrelation
     \item \textbf{Gas:} Argon (Ionisierungsenergie: 15,7 eV, Ionisationsgrad: \(10^{-7} - 10^{-6}\)).
 \end{itemize}
 
-\section{Aufbau}
+\subsection{Aufbau}
 Der gesamte Aufbau ist in einem transportablen Gestell untergebracht und umfasst folgende Hauptkomponenten:
 \begin{itemize}
     \item \textbf{Plasmakammer und Dispensor:} Die Elektroden in der Plasmakammer sind rund und befinden sich oben und unten. Die kapazitive Ankopplung erfolgt über einen HF-Generator. Ein integrierter Shaker in der oberen Elektrode dient zur Injektion der Teilchen.
@@ -212,7 +212,7 @@ Der gesamte Aufbau ist in einem transportablen Gestell untergebracht und umfasst
 \end{itemize}
 
 \newpage
-\section{Durchführung}
+\subsection{Durchführung}
 Die Durchführung des Experiments gliedert sich in mehrere Schritte:
 
 \begin{enumerate}
@@ -244,7 +244,7 @@ Die Durchführung des Experiments gliedert sich in mehrere Schritte:
 Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend untersucht werden kann.	
 
 
-\chapter{Auswertung}
+\section{Auswertung}
 	
 	\begin{enumerate}[font=\bfseries]
 		\setcounter{enumi}{-1}
@@ -252,7 +252,14 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 		\item \fehlt
 		\item \fehlt
 		\item \fehlt
-		\item \fehlt
+		\item Analyse des \textbf{Laserscans}:\\
+			Der im Histogramm (vgl.~Abb.~\ref{fig:histo}) ermittelte Teilchenabstand beträgt circa \qty{200}{\micro\meter}. Dieser Wert liegt etwas über dem solbst ermittelten Wert. Das könnte daran liegen, dass bei der automatischen Messung mit der Analysesoftware nicht immer alle Partikel erkannt werden und manche übersprungen werden. Dadurch ist der abstand natürlich größer als er tatsächlich ist.
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[width=0.7\textwidth]{data/histo.png}
+				\caption{Histogramm der Teilchenabstände}
+				\label{fig:histo}
+			\end{figure}
 		%\setcounter{enumi}{4} % in dem fall soll meine druckabhängigkeit 5 sein.
 		\item \begin{enumerate}[font=\bfseries, label=\alph*)]
 			\item \textbf{Druckabhängigkeit} des Kristalls: \\
@@ -328,37 +335,37 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 		\label{fig:Druckabnahme}
 	\end{figure}
 
-\chapter{Fazit}
+\section{Fazit}
 	\fehlt
 
-\listoffigures%\addcontentsline{toc}{chapter}{\listfigurename}
+% \listoffigures%\addcontentsline{toc}{chapter}{\listfigurename}
 	
-\begin{thebibliography}{111}%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-	\bibitem{Anleitung}
-	Prof. Dr. Markus Thoma, Dr. Michael Kretschmer. Anleitung zum Fortgeschrittenen"~Praktikum.\\ \glqq Versuch: Plasmakristall\grqq.\\ Justus-Liebig-Universität Gießen. 11/2022 MK.
+% \begin{thebibliography}{111}%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+% 	\bibitem{Anleitung}
+% 	Prof. Dr. Markus Thoma, Dr. Michael Kretschmer. Anleitung zum Fortgeschrittenen"~Praktikum.\\ \glqq Versuch: Plasmakristall\grqq.\\ Justus-Liebig-Universität Gießen. 11/2022 MK.
 	
-	\bibitem{Testat}
-		Das am 22.07.2024 angefertigte Testat zum Versuch \glqq Plasmakristall\grqq.
-	\end{thebibliography}
+% 	\bibitem{Testat}
+% 		Das am 22.07.2024 angefertigte Testat zum Versuch \glqq Plasmakristall\grqq.
+% 	\end{thebibliography}
 
 
-\chapter*{Anhang}\label{ch:Anhang}\addcontentsline{toc}{chapter}{Anhang}
-\FloatBarrier
+% \chapter*{Anhang}\label{ch:Anhang}\addcontentsline{toc}{chapter}{Anhang}
+% \FloatBarrier
 
 
 %% Testat ab hier!
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.95\textwidth, page=1]{data/Testat_Plasmakristall.pdf}		
-	\caption[Testat 1]{Die erste Seite des Testats des Versuchs}
-	\label{fig:Testat}
-\end{figure}
+% \begin{figure}[ht]
+% 	\centering
+% 	\includegraphics[width=0.95\textwidth, page=1]{data/Testat_Plasmakristall.pdf}		
+% 	\caption[Testat 1]{Die erste Seite des Testats des Versuchs}
+% 	\label{fig:Testat}
+% \end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.95\textwidth, page=2]{data/Testat_Plasmakristall.pdf}		
-	\caption[Testat 2]{Die zweite Seite des Testats des Versuchs}
-	\label{fig:Testat}
-\end{figure}
+% \begin{figure}[ht]
+% 	\centering
+% 	\includegraphics[width=0.95\textwidth, page=2]{data/Testat_Plasmakristall.pdf}		
+% 	\caption[Testat 2]{Die zweite Seite des Testats des Versuchs}
+% 	\label{fig:Testat}
+% \end{figure}
 
 \end{document}
