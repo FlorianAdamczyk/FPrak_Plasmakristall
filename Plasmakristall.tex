@@ -48,7 +48,7 @@
 
 \providecommand{\e}[1]{\ensuremath{\cdot 10^{#1}}}
 \providecommand{\fehlt}{\textcolor{red}{{ ¡Fehlt! }}}
-\providecommand{\mytitle}{Plasmakristall}
+\providecommand{\mytitle}{Plasmakristalle}
 
 \usepackage{siunitx}
 \sisetup{
@@ -255,11 +255,78 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 		\item \fehlt
 		%\setcounter{enumi}{4} % in dem fall soll meine druckabhängigkeit 5 sein.
 		\item \begin{enumerate}[font=\bfseries, label=\alph*)]
-			\item \textbf{Druckabhängigkeit} des Kristalls: 
-			\item Veränderung der Struktur bei \textbf{Änderung der Spannung}: 
+			\item \textbf{Druckabhängigkeit} des Kristalls: \\
+			bei Erniedrigung des Drucks von verändert sich die Struktur des Kristalls. Die Partikel beginnen schon bei \qty{32}{\pascal} zu stark zu zittern und zu schwingen wodurch die Kristallstruktur verloren geht. Bei weiterer Druckerniedrigung verstärkt sich diese Partikelbewegung was man sehr gut in Abbildung~\ref{fig:Druckabnahme_sub2} erkennen kann. Bei noch geringerem Druck ist die Teilchenbewegung so groß, dass das Plasma sie nicht mehr halten kann sie sinken zu Boden. Der Verlauf der Druckabnahme ist in Abbildung \ref{fig:Druckabnahme} dargestellt. 
+			
+			\item Veränderung der Struktur bei \textbf{Änderung der Spannung}: \\
+			bei veränderung der Spannung verändert sich sofort auch die Struktur des Kristalls. Bei einer Spannung von \qty{0,5}{\volt} ist eine starke Kompression der Partikel zu erkennen. Die Gitterkonstante ist in Richtung der Kondensatorplatten (vertikal) sehr gering. Bei kleineren Spannungen wird die Struktur nur minimal größer als im Ausgangszustand dafür jedoch deutlich unstrukturierter und man kann keine klare Kristallstruktur mehr erkennen. Bei unter \qty{0.13}{\volt} geht das Plasma aus weshalb die Partikel nicht mehr gegen die Gravitation nach oben gehalten werden und sodann zu Boden fallen. 
 		\end{enumerate}
 			
 	\end{enumerate}
+	
+	\begin{figure}
+		\centering
+		% Erste Zeile mit zwei Unterabbildungen
+		\begin{subfigure}[b]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{data/Export/nachLängererZeit.png}
+			\caption[Kristall vor Druckabnahme]{Plasmakristall vor Druckabnahme}
+			\label{fig:Druckabnahme_sub1}
+		\end{subfigure}
+		\hfill % Fügt horizontalen Abstand zwischen den Unterabbildungen ein
+		\begin{subfigure}[b]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{data/Export/druckabnahme32Pa.png}
+			\caption[Druckabnahme 1]{Plasmakristall bei \qty{32}{\pascal}}
+			\label{fig:Druckabnahme_sub2}
+		\end{subfigure}
+		
+		% Zweite Zeile mit zwei Unterabbildungen
+		\begin{subfigure}[b]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{data/Export/druckabnahme26Pa.png}
+			\caption[Druckabnahme 2]{Partikel bei \qty{26}{\pascal}}
+			\label{fig:Druckabnahme_sub3}
+		\end{subfigure}
+		\hfill % Fügt horizontalen Abstand zwischen den Unterabbildungen ein
+		\begin{subfigure}[b]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{data/Export/start.png}
+			\caption[Leere Kammer]{Bild der Kammer bei \qty{25}{\pascal}: Die Partikel sind aus dem Plasma herausgefallen}
+			\label{fig:Druckabnahme_sub4}
+		\end{subfigure}
+		
+		\caption{Der Plasmakristall bei verschiedenen Drücken}
+		\label{fig:Druckabnahme}
+	\end{figure}
+
+	\begin{figure}
+		\centering
+		% Erste Zeile mit zwei Unterabbildungen
+		\begin{subfigure}[b]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{data/Export/ausgangszustand_vorSpannungsaenderung.png}
+			\caption{Kristall vor Änderung}
+			\label{fig:Spannungsänderung_sub1}
+		\end{subfigure}
+		\hfill % Fügt horizontalen Abstand zwischen den Unterabbildungen ein
+		\begin{subfigure}[b]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{data/Export/ausgangszustand_spannung_0.5V.png}
+			\caption[Spannungsänderung 1]{Plasmakristall bei \qty{0,5}{\volt}}
+			\label{fig:Spannungsänderung_sub2}
+		\end{subfigure}
+		
+		% Zweite Zeile mit zwei Unterabbildungen
+		\begin{subfigure}[b]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{data/Export/ausgangszustand_spannung_0.13V.png}
+			\caption[Spannungsänderung 2]{Plasmakristall bei \qty{0,13}{\volt}}
+			\label{fig:Spannungsänderung_sub3}
+		\end{subfigure}
+		\hfill % Fügt horizontalen Abstand zwischen den Unterabbildungen ein
+		\begin{subfigure}[b]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{data/Export/start.png}
+			\caption[Leere Kammer]{Bild der Kammer bei $\mathrm{P}<\qty{0,13}{\volt}$: Das Plasma ist ausgegangen wodurch die Partikel heruntergefallen sind.}
+			\label{fig:Spannungsänderung_sub4}
+		\end{subfigure}
+		
+		\caption{Der Plasmakristall bei verschiedenen Spannungen}
+		\label{fig:Druckabnahme}
+	\end{figure}
 
 \chapter{Fazit}
 	\fehlt
