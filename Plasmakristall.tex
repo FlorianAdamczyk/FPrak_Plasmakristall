@@ -57,7 +57,9 @@
 	%per-mode = symbol
 }
 \DeclareSIUnit\bar{bar}
+\DeclareSIUnit\px{px}
 \DeclareSIUnit\atomicmassunit{u}
+\DeclareSIUnit\elemtLad{e}
 \usepackage{isotope}
 
 
@@ -90,8 +92,8 @@
 		\centering
 		\vspace*{0.5 cm}
 		% \begin{large} Justus-Liebig-Universität\\ Gießen \end{large}
-		\includegraphics[width = 0.6 \textwidth]{JLU_Giessen-Logo}	%University Logo
-		\\[2.0 cm]
+		\frame{\includegraphics[width = 0.5 \textwidth]{fotos/foto3.jpg}}
+		\\[.5 cm]
 		% \begin{center}    \textsc{\Large Justus - Liebig - Universität}\\{Giessen}\\[0.8cm]	\end{center}% University Name
 		Versuch 7 des\\
 		\textsc{\Large Fortgeschrittenen-Praktikums}\\ [0.3 cm]				% Course Code
@@ -100,7 +102,7 @@
 		\rule{\linewidth}{0.2 mm}\\
 		Versuchstermin 22.07.2024 \\
 		~ \\
-		[2.0 cm]
+		[.5 cm]
 		
 		
 		\begin{minipage}{0.49\textwidth}
@@ -248,25 +250,189 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 	
 	\begin{enumerate}[font=\bfseries]
 		\setcounter{enumi}{-1}
-		\item \fehlt
-		\item \fehlt
-		\item \fehlt
-		\item \fehlt
+		\item \textbf{Abbildungsmaßstab}
+		Damit die nachfolgenden Messungen auch SI-Einheiten zugeordnet werden können, muss der Abbildungsmaßstab bestimmt werden. Diese Messung geschieht vor der Zündung des Plasmas. In Abbildung \ref{img:Kalibration} ist am unteren Rand der Laser zu erkennen, die linke Kante des Lasers wird als Orientierung verwendet. Am Kameratisch kann mittels einer Mikrometerschraube die Position der Kamera und damit gleichzeitig des Lasers verschoben werden. Durch das Messen der Verschiebung an dieser Schraube $d_{cm}$ und dem Messen der Verschiebung des markanten Punktes des Lasers in Pixeln $d_{px}$, kann mithilfe des Messwerkzeugs im Computerprogramm \textit{uEyeCockpit}, der Abbildungsmaßstab bestimmt werden:
+		\begin{equation}
+			A = \frac{\SI{0.02032E-6}{\meter}}{871 \SI{871}{\px}} = \underline{\SI{23.33}{\micro \meter \per \px}}
+		\end{equation}  
+		
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.6\textwidth]{data/calibration.png}		
+			\caption{Plasmakammer vor dem Starten des Plasmas, am unteren Rand ist der Laser zu erkennen}
+			\label{img:Kalibration}
+		\end{figure}
+		\item\textbf{Herstellung des Plasmakristalls}
+		Nach dem Einlassen der Partikel sind diese unstrukturiert angeordnet, nach einigen Sekunden bilden sich erste Strukturen. Am linken und rechten Rand der Kammer sind Konvektionsströmung zu erkennen, welche durch Randeffekte der Elektroden verursacht werden. Nach 1-2 Minuten stellt sich in der Mitte eine Kristallstruktur ein, diese ist in Abbildung \ref{img:firstKristall}, gerade etwas Rechts unten der Mitte erkennbar. Generell ist der Kristall nach unten strukturierter, dies ist auf die Gravitation der Teilchen zurückzuführen, die oberen üben durch die Gravitation einen zusätzlichen stabilisierenden Druck auf die unteren Teilchen aus.
+		
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.6\textwidth]{data/partikel_first.png}		
+			\caption{erste Strukturbildung kurz nach dem Einlassen der Partikel}
+			\label{img:firstKristall}
+		\end{figure}
+
+		
+		\item \textbf{Dimensionen des Plasmakristalls}
+		\begin{enumerate}[font=\bfseries, label=\alph*)]
+			
+		\item Durch den vorab bestimmten Abbildungsmaßstab können manuell die Gitterabstände des Kristalls bestimmt werden. In Abbildung \ref{img:Abstände} ist eine Messung dargestellt, dabei wurde der Pixelabstand über jeweils 3 bis 6 Gitterabstände gemessen, wobei einerseits der Horizontale und Vertikale Abstand bestimmt wird. Für eine verbesserte Statistik wurde in einem weiteren Bereich gemessen. Tabelle \ref{table:Dimensionen} enthält die Zusammengefassten Werte. 
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.6\textwidth]{data/gitterabstände_2.messung.png}		
+			\caption{Messung der vertikalen und horizontalen Gitterabstände an verschiedenen Punkten, jeweils über 3 bis 6 Gitterabstände}
+			\label{img:Abstände}
+		\end{figure}
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{c c c c c }
+				\toprule[1.5pt]
+				& \multicolumn{2}{c}{vertikal} & \multicolumn{2}{c}{horizontal} \\
+				&  Länge [\si{\px}] & \# Abstände  &  Länge [\si{\px}] &\# Abstände\\
+				\midrule
+				\multirow{3}{*}{Bereich 1}      & 27  & 4  & 50 & 6  \\
+				& 34  & 5  & 46 & 5  \\
+				& 32  & 5  & 51 & 6  \\
+				\midrule
+				\multirow{3}{*}{Bereich 2}      & 22  & 3  & 31 & 5  \\
+				& 37  & 5  & 39 & 6  \\
+				& 41  & 5  & 32 & 5  \\
+				\midrule
+				\multirow{2}{*}{gemittelter Gitterabstand} 
+				&\multicolumn{2}{c}{\SI{6.51(0.21)}{\px}} &\multicolumn{2}{c}{\SI{8.16(0.64)}{\px}}\\
+				&\multicolumn{2}{c}{$d_y$ = \SI{151.84(4.88)}{\micro \meter}} &\multicolumn{2}{c}{$d_x$ = \SI{190.40(15.03)}{\micro \meter}}\\
+				\bottomrule[1.5pt]
+			\end{tabular}
+			\caption{Messung der Gitterabstände}\label{table:Dimensionen}
+		\end{table}
+	\item Um die Gesamtteilchenzahl zu bestimmen, müssen die Höhe und Breite der Wolke approximiert werden, die Höhe wird dabei mit \SI{182}{\px} $\widehat{=}$ \SI{4.25}{\milli \meter} und die Breite mit \SI{1288}{\px} $\widehat{=}$ \SI{30.05}{\milli \meter} bestimmt.
+	\item Über das Volumen kann die Gesamtteilchenanzahl ermittelt werden, dabei wird die Teilchenwolke als Zylinder approximiert, das Volumen ist daher:
+	\begin{equation}
+		V = \pi r^2 h = \SI{3011.18}{\milli \meter \cubed}
+	\end{equation} 
+	Die Gesamtteilchenanzahl kann über die mittleren Teilchenabstände und das Volumen bestimmt werden, wobei angenommen wurde, dass die Teilchendichte in horizontale x-Richtung der z-Richtung entspricht:
+	\begin{equation}
+		N = \frac{V}{d_x^2 \cdot d_y} = \underline{ 547045 \, \,\text{Teilchen}}
+	\end{equation}
+	im gesamten Volumen befinden sich also etwa 550000 Teilchen
+	\end{enumerate}
+		\item 	Für die Abschätzungen werden folgende Werte benötigt:
+		\begin{itemize}
+			\item Teilchenradius $a = \SI{1}{\micro \meter}$
+			\item Elektronentemperatur $kT_e$ = \SI{3}{\eV}
+			\item Ionentemperatur $kT_i$ = \SI{0.03}{\eV}
+			\item Dichte von Melamin-Formaldehyd $\rho = \SI{1510}{\kilogram \per \meter \cubed}$
+			\item $F_n = F_i = F_{th} = 0$
+			\item kinetische Partikeltemperatur $T_d = \SI{300}{\kelvin}$
+			\item Ionendichte $n_i$ = \SI{1E9}{\per \centi \meter \cubed}
+			\item Materialkonstante $B = 0.73$
+			\item Elektronenmasse $m_e = \SI{5.486E-4}{\atomicmassunit}$
+			\item Argon-Masse $M_{Ar} = \SI{39.948}{\atomicmassunit}$
+			\item Elektrische Feldkonstante $\epsilon_0 = \SI{8.854}{\ampere \second \per \volt \meter}$
+		\end{itemize}
+	\begin{enumerate}[font=\bfseries, label=\alph*)]
+			\item \textbf{Partikelladung $Q$}\\
+			 Die mittlere Partikelldaung im Plasmakristall ist gegeben durch:
+			\begin{equation}
+				Q = B \frac{4 \pi \epsilon_0 a k T_e}{e} \text{log}\left(\sqrt{\frac{T_e m_e}{T_i M_{Ar}}}\right)
+			\end{equation}
+		Durch einsetzten aller Werte ist die mittlere Ladung:
+		\begin{equation}
+			|Q| = \underline{\SI{5012}{\elemtLad} \, \widehat{=} \, \SI{8.027E-16}{\coulomb}}
+		\end{equation}
+		Eine Teilchen im Plasma trägt die Ladung von etwa \SI{5000}{\elemtLad}, angesichts der Größe der Partikel von \SI{1}{\micro \meter} scheint dieser Wert gut zu passen.
+	    \item \textbf{elektrisches Feld $E$} welches zur Levitation der Partikel notwendig ist. Da alle anderen Kräfte null sind $F_n = F_i = F_{th} = 0$, müssen Gravitationskraft und elektrische Kraft auf ein Partikel gleich sein, die Masse $m$ kann über Dichte und Volumen des Melamin-Formaldehyds bestimmt werden:
+	    \begin{equation}
+	    	\begin{split}
+	    		Q E = m g \\
+	    		\Rightarrow E = \frac{\rho V g}{Q} = \frac{\rho \left(\frac{4}{3} \pi a^3\right) g}{Q}\\
+	    		E = \underline{\SI{77.3}{\volt \per \meter}}
+	    	\end{split}
+	    \end{equation}
+    	Das benötigte elektrisches Feld besitzt mit rund \SI{77}{\volt \per \meter} einen realistisch und technisch leicht erreichbaren Wert.
+	    \item \textbf{Debye-Länge $\lambda_D$}\\
+	     Da das vorliegende Plasma schwach ionisiert ist, ist die Elektronentemperatur deutlich größer als die Ionentemperatur. Dadurch kann die Abschirmlänge nur über die Ioneneigenschaften bestimmt werden:
+	    	    \begin{equation}
+	    		\lambda_D = \sqrt{\frac{\epsilon_0 k_B T_i}{4 \pi e^2 n_i}} = \underline{\SI{4.07E-5}{\meter}  \, \widehat{=} \,  \SI{40.7}{\micro \meter}}
+	    \end{equation}
+	    Die Abschirmlänge ist rund 40-mal größer als der Teilchenradius, dies zeigt das die Ladung der Partikel weiträumig abgeschirmt wird. 
+	    \item \textbf{Coulomb-Kopplungsparameter $\Gamma$}\\
+	    Der Kopplungsparameter wird über folgende Gleichung berechnet:
+	    \begin{equation}
+	    	\Gamma = \frac{Q}{4 \pi \epsilon_0 \Delta k_B T_d}
+	    \end{equation}
+    	Dabei wird der Partikelabstand $\Delta$ aus dem Mittelwert des vertikalen und horizontalen Abstands aus Punkt \textbf{2} mit $\Delta =  \SI{171.12}{\micro \meter}$ verwendet, somit ergibt sich der Parameter zu:
+    	\begin{equation}
+    		\underline{\Gamma = 8170}
+    	\end{equation}
+    	Der effektive Coulomb-Kopplungsparameter berücksichtigt zusätzlich die Debye-Wellenlänge
+    	und den Partikelabstand:
+    	\begin{eqnarray}
+    		\Gamma_{\text{eff}} = \Gamma \cdot \text{exp}\left(-\frac{\Delta}{\lambda_D}\right) = 122
+    	\end{eqnarray}
+  		In der Anleitung \cite{Anleitung} ist angegeben, das zur Bildung eines Plasmakristalls der kritische Wert von $\Gamma_{\text{eff}}^c \simeq 100-1000$ überschritten werden muss. Da der effektive Kopplungsparameter im vorliegenden Plasma mit rund 122 etwas größer als die untere Grenze von 100 ist, ist ein Plasmakristall entstanden.
+		\end{enumerate}
 		\item Analyse des \textbf{Laserscans}:\\
-			Der im Histogramm (vgl.~Abb.~\ref{fig:histo}) ermittelte Teilchenabstand beträgt circa \qty{200}{\micro\meter}. Dieser Wert liegt etwas über dem solbst ermittelten Wert. Das könnte daran liegen, dass bei der automatischen Messung mit der Analysesoftware nicht immer alle Partikel erkannt werden und manche übersprungen werden. Dadurch ist der abstand natürlich größer als er tatsächlich ist.
+		\begin{enumerate}[font=\bfseries, label=\alph*)]
+		\item	Durch einen Laserscan wird ein vorher ausgewählter Bereich des Plasmakristalls gescannt. Das dabei entstandene Video wird mittels der Analysesoftware \textit{Octave} untersucht. Dieses identifiziert die 3 dimensionale Struktur des Kristalls, ein Plot der Struktur ist in \ref{fig:GitterAnalyse} erkennbar.
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[width=0.7\textwidth]{data/gitteranalyze3D.png}
+				\caption{von der Software identifizierte Teilchenanordnung, die Gitterebenen des Kristalls sind deutlich erkennbar}
+				\label{fig:GitterAnalyse}
+			\end{figure}
+		\item	In der Software können die Teilchenabstände berechnet werden, der im Histogramm (vgl.~Abb.~\ref{fig:histo}) ermittelte Teilchenabstand beträgt circa \qty{200}{\micro\meter}. Dieser Wert liegt etwas über dem selbst ermittelten Wert. Das könnte daran liegen, dass bei der automatischen Messung mit der Analysesoftware nicht immer alle Partikel erkannt werden und manche übersprungen werden. Dadurch ist der Abstand natürlich größer als er tatsächlich ist.
 			\begin{figure}[ht]
 				\centering
 				\includegraphics[width=0.5\textwidth]{data/histo.png}
 				\caption{Histogramm der Teilchenabstände}
 				\label{fig:histo}
 			\end{figure}
+		\item	In \ref{fig:parrkorrelation} ist die ermittelte Paarkorrelationsfunktion erkennbar, diese gibt an in welchem Abstand von einem Partikel weitere Partikel gefunden werden. Da 4 Peaks gut zu erkennen sind besteht eine Fernordnung, daher handelt es sich tatsächlich um einen Kristall.
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[width=0.5\textwidth]{data/parrkorrelation.png}
+				\caption{Paarkorrelationsfunktion des Plasmakristalls, es sind 4 Peaks zu erkennen, dies deutet auf eine Fernordnung hin}
+				\label{fig:parrkorrelation}
+			\end{figure}
+		\item	Zuletzt soll die vorliegende Gitterstruktur untersucht werden, dafür werden die Bond-Order Parameter $q_4$ und $q_6$ bestimmt, diese geben Rotationsinvarianzen im Kristall an. Zuerst werden die Parameter für ideale Kristallstrukturen ermittelt, diese sind in Tabelle \ref{table:Parameter} aufgelistet.\\
+		In der Abbildung \ref{fig:Bond} sind die Messwerte der Bond-Order Parameter für den Plasmakristall als 2D-Histogramm geplottet. Allgemein sind die Parameter sehr gestreut, wenn die ideal Werte aus \ref{table:Parameter} in den Histogrammen gesucht werden, sind diese nicht in der Nähe der Maxima. Die Parameter für das HCP Gitter sind den gestreuten Werten am nahestehen.\\
+		Die Ursache dieses Ergebnisses ist eventuell erneut die nicht optimale Bestimmung der Kristallpunkte der Analysesoftware \textit{Octave}, die Software hat nicht alle Gitterpunkte im Video bestimmen können.
+				\begin{table}[h!]
+				\centering
+				\begin{tabular}{c c c c  }
+					\toprule[1.5pt]
+					&BCC & FCC &HCP \\
+					& NN = 8 & \multicolumn{2}{c}{NN = 12} \\
+					\midrule
+					$q_4$& 0.51& 0.19 &0.01 \\
+					$q_6$& 0.63& 0.57& 0.48\\
+					\bottomrule[1.5pt]
+				\end{tabular}
+				\caption{Bond-Order Parameter idealer Kristallstrukturen}\label{table:Parameter}
+			\end{table}
+		\begin{figure}
+			\begin{subfigure}[c]{0.5\textwidth}
+				
+				\includegraphics[width=\textwidth]{data/winkel8.png}
+				\subcaption{NN = 8}
+				
+			\end{subfigure}
+			\begin{subfigure}[c]{0.5\textwidth}
+				\includegraphics[width=\textwidth]{data/winkel12.png}
+				\subcaption{NN = 12}
+			\end{subfigure}
+			\caption{Bond-Order Parameter des Plasmakristalls}
+			\label{fig:Bond}
+		\end{figure}
+		\end{enumerate}
 		%\setcounter{enumi}{4} % in dem fall soll meine druckabhängigkeit 5 sein.
 		\item \begin{enumerate}[font=\bfseries, label=\alph*)]
 			\item \textbf{Druckabhängigkeit} des Kristalls: \\
-			bei Erniedrigung des Drucks von verändert sich die Struktur des Kristalls. Die Partikel beginnen schon bei \qty{32}{\pascal} zu stark zu zittern und zu schwingen wodurch die Kristallstruktur verloren geht. Bei weiterer Druckerniedrigung verstärkt sich diese Partikelbewegung was man sehr gut in Abbildung~\ref{fig:Druckabnahme_sub2} erkennen kann. Bei noch geringerem Druck ist die Teilchenbewegung so groß, dass das Plasma sie nicht mehr halten kann sie sinken zu Boden. Der Verlauf der Druckabnahme ist in Abbildung \ref{fig:Druckabnahme} dargestellt. 
+			bei Erniedrigung des Drucks verändert sich die Struktur des Kristalls. Die Partikel beginnen schon bei \qty{32}{\pascal} stark an zu zittern und zu schwingen wodurch die Kristallstruktur verloren geht. Bei weiterer Druckerniedrigung verstärkt sich diese Partikelbewegung was man sehr gut in Abbildung~\ref{fig:Druckabnahme_sub2} erkennen kann. Bei noch geringerem Druck ist die Teilchenbewegung so groß, dass das Plasma sie nicht mehr halten kann sie sinken zu Boden. Der Verlauf der Druckabnahme ist in Abbildung \ref{fig:Druckabnahme} dargestellt. 
 			
 			\item Veränderung der Struktur bei \textbf{Änderung der Spannung}: \\
-			bei veränderung der Spannung verändert sich sofort auch die Struktur des Kristalls. Bei einer Spannung von \qty{0,5}{\volt} ist eine starke Kompression der Partikel zu erkennen. Die Gitterkonstante ist in Richtung der Kondensatorplatten (vertikal) sehr gering. Bei kleineren Spannungen wird die Struktur nur minimal größer als im Ausgangszustand dafür jedoch deutlich unstrukturierter und man kann keine klare Kristallstruktur mehr erkennen. Bei unter \qty{0.13}{\volt} geht das Plasma aus weshalb die Partikel nicht mehr gegen die Gravitation nach oben gehalten werden und sodann zu Boden fallen. 
+			Bei Veränderung der Spannung verändert sich sofort auch die Struktur des Kristalls. Bei einer Spannung von \qty{0.5}{\volt} ist eine starke Kompression der Partikel zu erkennen. Die Gitterkonstante ist in Richtung der Kondensatorplatten (vertikal) sehr gering. Bei kleineren Spannungen wird die Struktur nur minimal größer als im Ausgangszustand dafür jedoch deutlich unstrukturierter und man kann keine klare Kristallstruktur mehr erkennen. Bei unter \qty{0.13}{\volt} geht das Plasma aus weshalb die Partikel nicht mehr gegen die Gravitation nach oben gehalten werden und sodann zu Boden fallen. 
 		\end{enumerate}
 			
 	\end{enumerate}
@@ -336,36 +502,72 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 	\end{figure}
 
 \section{Fazit}
-	\fehlt
-
+	Im Versuch zum Plamakristall konnte erfolgreich ein schwach ionisiertes Argon-Plasma gezündet und darin durch hinzufügen von Mikropartikeln, die Entstehung eines Plasmakristalls beobachtet werden.\\
+	Die Gitterabstände der entstandenen Kristallstruktur konnten auf 2 verschieden Weisen bestimmt werden, die manuell ermittelten Werte und die Werte der Analysesoftware stimmen grundsätzlich überein. Die ermittelte Debye-Länge und die Kopplungsparameter zeigen, dass sich ein Kristall im Plasma gebildet hat.\\
+	Durch die Analysesoftware konnte nicht wirklich gut ein Kristallgitter bestimmt werden, dies lässt sich durch die vermutliche nicht Erkennung einiger Kristallpunkt erklären. Durch veränderte Einstellungen in der Software kann in Zukunft eventuell dieses Messung verbessert werden.
 % \listoffigures%\addcontentsline{toc}{chapter}{\listfigurename}
+
+\newpage
+ \begin{thebibliography}{111}%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+ 	\bibitem{Anleitung}
+	Prof. Dr. Markus Thoma, Dr. Michael Kretschmer. Anleitung zum Fortgeschrittenen"~Praktikum.\\ \glqq Versuch: Plasmakristall\grqq.\\ Justus-Liebig-Universität Gießen. 11/2022 MK.
 	
-% \begin{thebibliography}{111}%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-% 	\bibitem{Anleitung}
-% 	Prof. Dr. Markus Thoma, Dr. Michael Kretschmer. Anleitung zum Fortgeschrittenen"~Praktikum.\\ \glqq Versuch: Plasmakristall\grqq.\\ Justus-Liebig-Universität Gießen. 11/2022 MK.
+ 	\bibitem{Testat}
+ 		Das am 22.07.2024 angefertigte Testat zum Versuch \glqq Plasmakristall\grqq.
+ 	\end{thebibliography}
+
+
+% \section*{Anhang}\label{ch:Anhang}\addcontentsline{toc}{chapter}{Anhang}
+%\FloatBarrier
+	\begin{figure}
+	\centering
+	% Erste Zeile mit zwei Unterabbildungen
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{data/BCC_perfect.png}
+		\caption{BCC Gitter}
+	\end{subfigure}
+	\hfill % Fügt horizontalen Abstand zwischen den Unterabbildungen ein
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{data/FCC_perfect.png}
+		\caption{FCC Gitter}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{data/HCP_perfect.png}
+		\caption{HCP Gitter}
+	\end{subfigure}
 	
-% 	\bibitem{Testat}
-% 		Das am 22.07.2024 angefertigte Testat zum Versuch \glqq Plasmakristall\grqq.
-% 	\end{thebibliography}
+	% Zweite Zeile mit zwei Unterabbildungen
+	\begin{subfigure}[b]{0.3\textwidth}
+	\includegraphics[width=\textwidth]{data/BCC_perfect_paarcorr.png}
+	\caption{BCC Paarkorrelation}
+	\end{subfigure}
+	\hfill % Fügt horizontalen Abstand zwischen den Unterabbildungen ein
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{data/FCC_perfect_paarcorr.png}
+		\caption{FCC Paarkorrelation}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{data/HCP_perfect_paarcorr.png}
+		\caption{HCP Paarkorrelation}
+	\end{subfigure}
+		
+	\caption{Ideale Kristallgitter}
+	\label{fig:Ideal}
+\end{figure}
 
+% Testat ab hier!
+ \begin{figure}[ht]
+ 	\centering
+ 	\includegraphics[width=0.9\textwidth, page=1]{data/Testat_Plasmakristall.pdf}		
+ 	\caption[Testat 1]{Die erste Seite des Testats des Versuchs}
+ 	\label{fig:Testat}
+ \end{figure}
 
-% \chapter*{Anhang}\label{ch:Anhang}\addcontentsline{toc}{chapter}{Anhang}
-% \FloatBarrier
-
-
-%% Testat ab hier!
-% \begin{figure}[ht]
-% 	\centering
-% 	\includegraphics[width=0.95\textwidth, page=1]{data/Testat_Plasmakristall.pdf}		
-% 	\caption[Testat 1]{Die erste Seite des Testats des Versuchs}
-% 	\label{fig:Testat}
-% \end{figure}
-
-% \begin{figure}[ht]
-% 	\centering
-% 	\includegraphics[width=0.95\textwidth, page=2]{data/Testat_Plasmakristall.pdf}		
-% 	\caption[Testat 2]{Die zweite Seite des Testats des Versuchs}
-% 	\label{fig:Testat}
-% \end{figure}
+ \begin{figure}[ht]
+ 	\centering
+ 	\includegraphics[width=0.9\textwidth, page=2]{data/Testat_Plasmakristall.pdf}		
+ 	\caption[Testat 2]{Die zweite Seite des Testats des Versuchs}
+ 	\label{fig:Testat}
+ \end{figure}
 
 \end{document}
