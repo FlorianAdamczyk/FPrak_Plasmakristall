@@ -51,6 +51,7 @@
 \providecommand{\mytitle}{Plasmakristalle}
 
 \usepackage{siunitx}
+% \input{siunitx-local-units}
 \sisetup{
 	separate-uncertainty = true,
 	%per-mode = fraction,
@@ -134,7 +135,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-% \tableofcontents
+\tableofcontents
 %\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -143,18 +144,17 @@
 %\pagebreak
 	
 %\setcounter{chapter}{-1}
-\section*{Zielsetzung}\addcontentsline{toc}{chapter}{Einleitung}
+\section*{Zielsetzung}%\addcontentsline{toc}{section}{Zielsetzung}
 Im Rahmen des Versuchs \glqq{}Plasmakristall\grqq{} wird die Erzeugung und Untersuchung eines Plasmakristalls in einer Niederdruckkammer angestrebt. Hierbei wird ein Plasma aus Argon-Gas erzeugt, in das Mikropartikel aus Plastik eingebracht werden. Diese Partikel laden sich negativ auf und ordnen sich unter geeigneten Bedingungen zu einem Kristall. Ziel des Experiments ist es, die Kristallstruktur, die Abstände zwischen den Partikeln sowie den Übergang zur flüssigen Phase zu analysieren. Die Beobachtung und Analyse der Kristallbildung erfolgt mithilfe eines Lasers und einer Digitalkamera, die es ermöglichen, die Strukturen ebenenweise zu erfassen und zu dokumentieren. Die gewonnenen Daten werden anschließend mit theoretischen Modellen und den Eigenschaften idealer Kristalle verglichen, um ein tieferes Verständnis der physikalischen Prozesse zu erlangen.
-
 	% notiz an mich: mit "~ bewirke ich einen geschützten bindestrich an dem nicht getrennt werden darf.
 	% nur eine ~ macht ein geschütztes (normales) Leerzeichen. \, macht ein halbes geschütztes Leerzeichen.
 
 \section{Theorie}
-\subsection{Einleitung} Der Begriff \glqq{}Plasmakristall\grqq{} mag auf den ersten Blick widersprüchlich erscheinen, da man in der Plasmaphase keine geordneten Strukturen erwartet. Normalerweise ist es erforderlich, dass ein System von der gasförmigen über die flüssige in die feste Phase übergeht, um kristalline Strukturen zu bilden. In einem herkömmlichen Plasma ist dies nicht möglich. Allerdings können in komplexen, mehrkomponentigen Plasmen unter bestimmten Bedingungen geordnete Strukturen auftreten. Ein Beispiel hierfür sind Mikropartikel aus Plastik, die sich in einem Niedertemperaturplasma zu einer kristallartigen Anordnung formieren können, was als Plasmakristall bezeichnet wird.
+\paragraph*{Der Begriff \glqq{}Plasmakristall\grqq{}} mag auf den ersten Blick widersprüchlich erscheinen, da man in der Plasmaphase keine geordneten Strukturen erwartet. Normalerweise ist es erforderlich, dass ein System von der gasförmigen über die flüssige in die feste Phase übergeht, um kristalline Strukturen zu bilden. In einem herkömmlichen Plasma ist dies nicht möglich. Allerdings können in komplexen, mehrkomponentigen Plasmen unter bestimmten Bedingungen geordnete Strukturen auftreten. Ein Beispiel hierfür sind Mikropartikel aus Plastik, die sich in einem Niedertemperaturplasma zu einer kristallartigen Anordnung formieren können, was als Plasmakristall bezeichnet wird.
 
-\paragraph{Die theoretische Vorhersage} des Plasmakristalls erfolgte 1986, und der experimentelle Nachweis gelang 1994 am Deutschen Zentrum für Luft- und Raumfahrt (DLR) in Köln in Zusammenarbeit mit dem Max-Planck-Institut für extraterrestrische Physik (MPE) in Garching. Die Untersuchung von Plasmakristallen ist ein aktuelles Forschungsgebiet, das sowohl für die Grundlagenforschung als auch für Anwendungen in der Materialwissenschaft und der Astrophysik von Interesse ist.
+\paragraph*{Die theoretische Vorhersage} des Plasmakristalls erfolgte 1986, und der experimentelle Nachweis gelang 1994 am Deutschen Zentrum für Luft- und Raumfahrt (DLR) in Köln in Zusammenarbeit mit dem Max-Planck-Institut für extraterrestrische Physik (MPE) in Garching. Die Untersuchung von Plasmakristallen ist ein aktuelles Forschungsgebiet, das sowohl für die Grundlagenforschung als auch für Anwendungen in der Materialwissenschaft und der Astrophysik von Interesse ist.
 
-\section{Plasma als vierter Aggregatzustand}
+\subsection{Plasma als vierter Aggregatzustand}
 Plasma wird oft als der vierte Aggregatzustand bezeichnet, bei dem die Atome ionisiert vorliegen. Dies bedeutet, dass die Elektronen von den Atomkernen getrennt und somit frei beweglich sind. Plasmen werden je nach den Eigenschaften ihrer Teilchen in verschiedene Kategorien eingeteilt:
 
 \begin{itemize}
@@ -208,7 +208,7 @@ Der gesamte Aufbau ist in einem transportablen Gestell untergebracht und umfasst
     \item \textbf{Plasmakammer und Dispensor:} Die Elektroden in der Plasmakammer sind rund und befinden sich oben und unten. Die kapazitive Ankopplung erfolgt über einen HF-Generator. Ein integrierter Shaker in der oberen Elektrode dient zur Injektion der Teilchen.
     \item \textbf{Vakuum- und Gasfüllsystem:} Bestehend aus einer Membran-Vorpumpe, einem Handventil, einer Turbomolekularpumpe und einem Druckbehälter mit Argon. Die Druckregelung erfolgt über ein motorisiertes Ventilsystem.
     \item \textbf{Laser:} Ein Dioden-Laser (652 nm Wellenlänge, 35 mW Ausgangsleistung) mit integrierter Zylinderoptik zur Auffächerung des Strahls.
-    \item \textbf{Videokamera:} Eine HD-Kamera zur Aufzeichnung des gestreuten Laserlichts. Sie verfügt über ein Objektiv mit Interferenzfilter und eine motorisierte Linearverschiebung zur Kristall-Scan.
+    \item \textbf{Videokamera:} Eine HD-Kamera zur Aufzeichnung des gestreuten Laserlichts. Sie verfügt über ein Objektiv mit Interferenzfilter und eine motorisierte Linearverschiebung zum Kristall-Scan.
     \item \textbf{Steuerelektronik (E-Box):} Zum Betrieb und zur Steuerung aller Experimentkomponenten, gesteuert durch ein Programm namens \glqq{}LabView\grqq{}.
     \item \textbf{Rechner:} Ein Kompakt-PC zur Steuerung des Experimentaufbaus, Anzeige, Aufzeichnung und Auswertung der Kamerabilder sowie Ansteuerung des Scannermotors.
 \end{itemize}
@@ -222,7 +222,7 @@ Die Durchführung des Experiments gliedert sich in mehrere Schritte:
     \begin{itemize}
         \item Einschalten der 24V-Spannungsversorgung und der E-Box am Vortag.
         \item Aktivierung der Pumpen und Öffnen des Handventils.
-        \item Einschalten der Turbomolekularpumpe bei einem Druck unter 8 mbar.
+        \item Einschalten der Turbomolekularpumpe bei einem Druck unter \SI{8}{\hecto\pascal}. %%%%%
     \end{itemize}
     \item \textbf{Starten des Experiments:}
     \begin{itemize}
@@ -253,7 +253,7 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 		\item \textbf{Abbildungsmaßstab}
 		Damit die nachfolgenden Messungen auch SI-Einheiten zugeordnet werden können, muss der Abbildungsmaßstab bestimmt werden. Diese Messung geschieht vor der Zündung des Plasmas. In Abbildung \ref{img:Kalibration} ist am unteren Rand der Laser zu erkennen, die linke Kante des Lasers wird als Orientierung verwendet. Am Kameratisch kann mittels einer Mikrometerschraube die Position der Kamera und damit gleichzeitig des Lasers verschoben werden. Durch das Messen der Verschiebung an dieser Schraube $d_{cm}$ und dem Messen der Verschiebung des markanten Punktes des Lasers in Pixeln $d_{px}$, kann mithilfe des Messwerkzeugs im Computerprogramm \textit{uEyeCockpit}, der Abbildungsmaßstab bestimmt werden:
 		\begin{equation}
-			A = \frac{\SI{0.02032E-6}{\meter}}{871 \SI{871}{\px}} = \underline{\SI{23.33}{\micro \meter \per \px}}
+			A = \frac{\SI{0.02032E-6}{\meter}}{871 \SI{871}{\px}} = \highlight{\SI{23.33}{\micro \meter \per \px}}
 		\end{equation}  
 		
 		\begin{figure}[ht]
@@ -263,7 +263,7 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 			\label{img:Kalibration}
 		\end{figure}
 		\item\textbf{Herstellung des Plasmakristalls}
-		Nach dem Einlassen der Partikel sind diese unstrukturiert angeordnet, nach einigen Sekunden bilden sich erste Strukturen. Am linken und rechten Rand der Kammer sind Konvektionsströmung zu erkennen, welche durch Randeffekte der Elektroden verursacht werden. Nach 1-2 Minuten stellt sich in der Mitte eine Kristallstruktur ein, diese ist in Abbildung \ref{img:firstKristall}, gerade etwas Rechts unten der Mitte erkennbar. Generell ist der Kristall nach unten strukturierter, dies ist auf die Gravitation der Teilchen zurückzuführen, die oberen üben durch die Gravitation einen zusätzlichen stabilisierenden Druck auf die unteren Teilchen aus.
+		Nach dem Einlassen der Partikel sind diese unstrukturiert angeordnet, nach einigen Sekunden bilden sich erste Strukturen. Am linken und rechten Rand der Kammer sind Konvektionsströmung zu erkennen, welche durch Randeffekte der Elektroden verursacht werden. Nach 1-2 Minuten stellt sich in der Mitte eine Kristallstruktur ein, diese ist in Abbildung \ref{img:firstKristall}, gerade etwas rechts unten der Mitte erkennbar. Generell ist der Kristall nach unten strukturierter, dies ist auf die Gravitation der Teilchen zurückzuführen, die oberen üben durch die Gravitation einen zusätzlichen stabilisierenden Druck auf die unteren Teilchen aus.
 		
 		\begin{figure}[ht]
 			\centering
@@ -332,7 +332,7 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 		\end{itemize}
 	\begin{enumerate}[font=\bfseries, label=\alph*)]
 			\item \textbf{Partikelladung $Q$}\\
-			 Die mittlere Partikelldaung im Plasmakristall ist gegeben durch:
+			 Die mittlere Partikelladung im Plasmakristall ist gegeben durch:
 			\begin{equation}
 				Q = B \frac{4 \pi \epsilon_0 a k T_e}{e} \text{log}\left(\sqrt{\frac{T_e m_e}{T_i M_{Ar}}}\right)
 			\end{equation}
@@ -340,8 +340,8 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 		\begin{equation}
 			|Q| = \underline{\SI{5012}{\elemtLad} \, \widehat{=} \, \SI{8.027E-16}{\coulomb}}
 		\end{equation}
-		Eine Teilchen im Plasma trägt die Ladung von etwa \SI{5000}{\elemtLad}, angesichts der Größe der Partikel von \SI{1}{\micro \meter} scheint dieser Wert gut zu passen.
-	    \item \textbf{elektrisches Feld $E$} welches zur Levitation der Partikel notwendig ist. Da alle anderen Kräfte null sind $F_n = F_i = F_{th} = 0$, müssen Gravitationskraft und elektrische Kraft auf ein Partikel gleich sein, die Masse $m$ kann über Dichte und Volumen des Melamin-Formaldehyds bestimmt werden:
+		Ein Teilchen im Plasma trägt die Ladung von etwa \SI{5000}{\elemtLad}, angesichts der Größe der Partikel von \SI{1}{\micro \meter} scheint dieser Wert gut zu passen.
+	    \item \textbf{elektrisches Feld, $E$} welches zur Levitation der Partikel notwendig ist. Da alle anderen Kräfte null sind $F_n = F_i = F_{th} = 0$, müssen Gravitationskraft und elektrische Kraft auf ein Partikel gleich sein, die Masse $m$ kann über Dichte und Volumen des Melamin-Formaldehyds bestimmt werden:
 	    \begin{equation}
 	    	\begin{split}
 	    		Q E = m g \\
@@ -355,7 +355,7 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 	    	    \begin{equation}
 	    		\lambda_D = \sqrt{\frac{\epsilon_0 k_B T_i}{4 \pi e^2 n_i}} = \underline{\SI{4.07E-5}{\meter}  \, \widehat{=} \,  \SI{40.7}{\micro \meter}}
 	    \end{equation}
-	    Die Abschirmlänge ist rund 40-mal größer als der Teilchenradius, dies zeigt das die Ladung der Partikel weiträumig abgeschirmt wird. 
+	    Die Abschirmlänge ist rund 40-mal größer als der Teilchenradius, dies zeigt, dass die Ladung der Partikel weiträumig abgeschirmt wird. 
 	    \item \textbf{Coulomb-Kopplungsparameter $\Gamma$}\\
 	    Der Kopplungsparameter wird über folgende Gleichung berechnet:
 	    \begin{equation}
@@ -388,7 +388,7 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 				\caption{Histogramm der Teilchenabstände}
 				\label{fig:histo}
 			\end{figure}
-		\item	In \ref{fig:parrkorrelation} ist die ermittelte Paarkorrelationsfunktion erkennbar, diese gibt an in welchem Abstand von einem Partikel weitere Partikel gefunden werden. Da 4 Peaks gut zu erkennen sind besteht eine Fernordnung, daher handelt es sich tatsächlich um einen Kristall.
+		\item	In \ref{fig:parrkorrelation} ist die ermittelte Paarkorrelationsfunktion erkennbar, diese gibt an in welchem Abstand von einem Partikel weitere Partikel gefunden werden. Da 4 Peaks gut zu erkennen sind, besteht eine Fernordnung, daher handelt es sich tatsächlich um einen Kristall.
 			\begin{figure}[ht]
 				\centering
 				\includegraphics[width=0.5\textwidth]{data/parrkorrelation.png}
@@ -396,7 +396,7 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 				\label{fig:parrkorrelation}
 			\end{figure}
 		\item	Zuletzt soll die vorliegende Gitterstruktur untersucht werden, dafür werden die Bond-Order Parameter $q_4$ und $q_6$ bestimmt, diese geben Rotationsinvarianzen im Kristall an. Zuerst werden die Parameter für ideale Kristallstrukturen ermittelt, diese sind in Tabelle \ref{table:Parameter} aufgelistet.\\
-		In der Abbildung \ref{fig:Bond} sind die Messwerte der Bond-Order Parameter für den Plasmakristall als 2D-Histogramm geplottet. Allgemein sind die Parameter sehr gestreut, wenn die ideal Werte aus \ref{table:Parameter} in den Histogrammen gesucht werden, sind diese nicht in der Nähe der Maxima. Die Parameter für das HCP Gitter sind den gestreuten Werten am nahestehen.\\
+		In der Abbildung \ref{fig:Bond} sind die Messwerte der Bond-Order Parameter für den Plasmakristall als 2D-Histogramm geplottet. Allgemein sind die Parameter sehr gestreut, wenn die ideal Werte aus \ref{table:Parameter} in den Histogrammen gesucht werden, sind diese nicht in der Nähe der Maxima. Die Parameter für das HCP Gitter sind den gestreuten Werten am naheliegendsten.\\
 		Die Ursache dieses Ergebnisses ist eventuell erneut die nicht optimale Bestimmung der Kristallpunkte der Analysesoftware \textit{Octave}, die Software hat nicht alle Gitterpunkte im Video bestimmen können.
 				\begin{table}[h!]
 				\centering
@@ -429,10 +429,10 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 		%\setcounter{enumi}{4} % in dem fall soll meine druckabhängigkeit 5 sein.
 		\item \begin{enumerate}[font=\bfseries, label=\alph*)]
 			\item \textbf{Druckabhängigkeit} des Kristalls: \\
-			bei Erniedrigung des Drucks verändert sich die Struktur des Kristalls. Die Partikel beginnen schon bei \qty{32}{\pascal} stark an zu zittern und zu schwingen wodurch die Kristallstruktur verloren geht. Bei weiterer Druckerniedrigung verstärkt sich diese Partikelbewegung was man sehr gut in Abbildung~\ref{fig:Druckabnahme_sub2} erkennen kann. Bei noch geringerem Druck ist die Teilchenbewegung so groß, dass das Plasma sie nicht mehr halten kann sie sinken zu Boden. Der Verlauf der Druckabnahme ist in Abbildung \ref{fig:Druckabnahme} dargestellt. 
+			bei Erniedrigung des Drucks verändert sich die Struktur des Kristalls. Die Partikel beginnen schon bei \qty{32}{\pascal} stark an zu zittern und zu schwingen, wodurch die Kristallstruktur verloren geht. Bei weiterer Druckerniedrigung verstärkt sich diese Partikelbewegung, was man sehr gut in Abbildung~\ref{fig:Druckabnahme_sub2} erkennen kann. Bei noch geringerem Druck ist die Teilchenbewegung so groß, dass das Plasma sie nicht mehr halten kann, sie sinken zu Boden. Der Verlauf der Druckabnahme ist in Abbildung \ref{fig:Druckabnahme} dargestellt. 
 			
 			\item Veränderung der Struktur bei \textbf{Änderung der Spannung}: \\
-			Bei Veränderung der Spannung verändert sich sofort auch die Struktur des Kristalls. Bei einer Spannung von \qty{0.5}{\volt} ist eine starke Kompression der Partikel zu erkennen. Die Gitterkonstante ist in Richtung der Kondensatorplatten (vertikal) sehr gering. Bei kleineren Spannungen wird die Struktur nur minimal größer als im Ausgangszustand dafür jedoch deutlich unstrukturierter und man kann keine klare Kristallstruktur mehr erkennen. Bei unter \qty{0.13}{\volt} geht das Plasma aus weshalb die Partikel nicht mehr gegen die Gravitation nach oben gehalten werden und sodann zu Boden fallen. 
+			Bei Veränderung der Spannung verändert sich sofort auch die Struktur des Kristalls. Bei einer Spannung von \qty{0.5}{\volt} ist eine starke Kompression der Partikel zu erkennen. Die Gitterkonstante ist in Richtung der Kondensatorplatten (vertikal) sehr gering. Bei kleineren Spannungen wird die Struktur nur minimal größer als im Ausgangszustand, dafür jedoch deutlich unstrukturierter und man kann keine klare Kristallstruktur mehr erkennen. Bei unter \qty{0.13}{\volt} geht das Plasma aus, weshalb die Partikel nicht mehr gegen die Gravitation nach oben gehalten werden und sodann zu Boden fallen. Die verschiedenen Zustände sind in Abbildung \ref{fig:Spannungsaenderung} dargestellt.
 		\end{enumerate}
 			
 	\end{enumerate}
@@ -475,36 +475,36 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
 		\begin{subfigure}[b]{0.45\textwidth}
 			\includegraphics[width=\textwidth]{data/Export/ausgangszustand_vorSpannungsaenderung.png}
 			\caption{Kristall vor Änderung}
-			\label{fig:Spannungsänderung_sub1}
+			\label{fig:Spannungsaenderung_sub1}
 		\end{subfigure}
 		\hfill % Fügt horizontalen Abstand zwischen den Unterabbildungen ein
 		\begin{subfigure}[b]{0.45\textwidth}
 			\includegraphics[width=\textwidth]{data/Export/ausgangszustand_spannung_0.5V.png}
 			\caption[Spannungsänderung 1]{Plasmakristall bei \qty{0,5}{\volt}}
-			\label{fig:Spannungsänderung_sub2}
+			\label{fig:Spannungsaenderung_sub2}
 		\end{subfigure}
 		
 		% Zweite Zeile mit zwei Unterabbildungen
 		\begin{subfigure}[b]{0.45\textwidth}
 			\includegraphics[width=\textwidth]{data/Export/ausgangszustand_spannung_0.13V.png}
 			\caption[Spannungsänderung 2]{Plasmakristall bei \qty{0,13}{\volt}}
-			\label{fig:Spannungsänderung_sub3}
+			\label{fig:Spannungsaenderung_sub3}
 		\end{subfigure}
 		\hfill % Fügt horizontalen Abstand zwischen den Unterabbildungen ein
 		\begin{subfigure}[b]{0.45\textwidth}
 			\includegraphics[width=\textwidth]{data/Export/start.png}
-			\caption[Leere Kammer]{Bild der Kammer bei $\mathrm{P}<\qty{0,13}{\volt}$: Das Plasma ist ausgegangen wodurch die Partikel heruntergefallen sind.}
-			\label{fig:Spannungsänderung_sub4}
+			\caption[Leere Kammer]{Bild der Kammer bei $\mathrm{P}<\qty{0,13}{\volt}$: Das Plasma ist ausgegangen, wodurch die Partikel heruntergefallen sind.}
+			\label{fig:Spannungsaenderung_sub4}
 		\end{subfigure}
 		
 		\caption{Der Plasmakristall bei verschiedenen Spannungen}
-		\label{fig:Druckabnahme}
+		\label{fig:Spannungsaenderung}
 	\end{figure}
 
-\section{Fazit}
-	Im Versuch zum Plamakristall konnte erfolgreich ein schwach ionisiertes Argon-Plasma gezündet und darin durch hinzufügen von Mikropartikeln, die Entstehung eines Plasmakristalls beobachtet werden.\\
+\section*{Fazit}
+	Im Versuch zum Plamakristall konnte erfolgreich ein schwach ionisiertes Argon-Plasma gezündet und darin durch Hinzufügen von Mikropartikeln, die Entstehung eines Plasmakristalls beobachtet werden.\\
 	Die Gitterabstände der entstandenen Kristallstruktur konnten auf 2 verschieden Weisen bestimmt werden, die manuell ermittelten Werte und die Werte der Analysesoftware stimmen grundsätzlich überein. Die ermittelte Debye-Länge und die Kopplungsparameter zeigen, dass sich ein Kristall im Plasma gebildet hat.\\
-	Durch die Analysesoftware konnte nicht wirklich gut ein Kristallgitter bestimmt werden, dies lässt sich durch die vermutliche nicht Erkennung einiger Kristallpunkt erklären. Durch veränderte Einstellungen in der Software kann in Zukunft eventuell dieses Messung verbessert werden.
+	Durch die Analysesoftware konnte nicht wirklich gut ein Kristallgitter bestimmt werden, dies lässt sich vermutliche durch die schlechte Erkennung einiger Kristallpunkte erklären. Durch veränderte Einstellungen in der Software könnte in Zukunft eventuell diese Messung verbessert werden.
 % \listoffigures%\addcontentsline{toc}{chapter}{\listfigurename}
 
 \newpage
@@ -517,9 +517,9 @@ Durch diese Schritte wird ein stabiler Plasmakristall erzeugt, der anschließend
  	\end{thebibliography}
 
 
-% \section*{Anhang}\label{ch:Anhang}\addcontentsline{toc}{chapter}{Anhang}
+\section*{Anhang}\label{ch:Anhang}%\addcontentsline{toc}{section}{Anhang}
 %\FloatBarrier
-	\begin{figure}
+	\begin{figure}[ht]
 	\centering
 	% Erste Zeile mit zwei Unterabbildungen
 	\begin{subfigure}[b]{0.3\textwidth}
